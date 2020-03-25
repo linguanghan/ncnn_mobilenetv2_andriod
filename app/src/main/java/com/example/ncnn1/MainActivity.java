@@ -83,14 +83,14 @@ public class MainActivity extends Activity {
         byte[] bin = null;
 
         {
-            InputStream assetsInputStream = getAssets().open("mobilenet_v1.param.bin");
+            InputStream assetsInputStream = getAssets().open("mobilenet_v2.param.bin");
             int available = assetsInputStream.available();
             param = new byte[available];
             int byteCode = assetsInputStream.read(param);
             assetsInputStream.close();
         }
         {
-            InputStream assetsInputStream = getAssets().open("mobilenet_v1.bin");
+            InputStream assetsInputStream = getAssets().open("mobilenet_v2.bin");
             int available = assetsInputStream.available();
             bin = new byte[available];
             int byteCode = assetsInputStream.read(bin);
@@ -140,7 +140,7 @@ public class MainActivity extends Activity {
     private void readCacheLabelFromLocalFile() {
         try {
             AssetManager assetManager = getApplicationContext().getAssets();
-            BufferedReader reader = new BufferedReader(new InputStreamReader(assetManager.open("synset_v1.txt")));
+            BufferedReader reader = new BufferedReader(new InputStreamReader(assetManager.open("synset_v2.txt")));
             String readLine = null;
             while ((readLine = reader.readLine()) != null) {
                 resultLabel.add(readLine);

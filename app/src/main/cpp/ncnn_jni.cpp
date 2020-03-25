@@ -19,7 +19,7 @@
 #include <vector>
 // ncnn
 #include "include/net.h"
-#include "mobilenet_v1.id.h"
+#include "mobilenet_v2.id.h"
 #include <sys/time.h>
 #include <unistd.h>
 
@@ -97,11 +97,11 @@ JNIEXPORT jfloatArray JNICALL Java_com_example_ncnn1_NcnnJni_Detect(JNIEnv* env,
 
         ncnn::Extractor ex = ncnn_net.create_extractor();
         // 如果时不加密是使用ex.input("data", in);
-        ex.input(mobilenet_v1_param_id::BLOB_input_1, in);
+        ex.input(mobilenet_v2_param_id::BLOB_data, in);
 
         ncnn::Mat out;
         // 如果时不加密是使用ex.extract("prob", out);
-        ex.extract(mobilenet_v1_param_id::BLOB_248, out);
+        ex.extract(mobilenet_v2_param_id::BLOB_prob, out);
 
         int output_size = out.w;
         jfloat *output[output_size];

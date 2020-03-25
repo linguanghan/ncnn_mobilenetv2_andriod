@@ -1,3 +1,5 @@
+
+
 **使用方法**
 
 ---
@@ -14,7 +16,7 @@
 
  `git clone https://github.com/linguanghan/ncnn_mobilenetv2_andriod.git`
 
-三、使用Andriod Studio运行改代码
+三、使用Andriod Studio运行该代码
 
 ​     1、Android Studio的配置
 
@@ -40,9 +42,15 @@
 
 ​       <img src=".\images\5.png" alt="5" style="zoom:50%;" />  
 
-2、使用手机调式该项目
+  2、使用手机调式该项目
 
 ​      参考链接：[Android studio 连接手机调试](https://blog.csdn.net/qq_35251502/article/details/80770448)
+
+四、效果图
+
+​      <img src=".\images\1.jpg" style="zoom:30%;" />
+
+
 
 
 
